@@ -32,3 +32,6 @@ dvc init
 ```
 
 ### STEP 06- commit and push the changes to the remote repository
+
+### Tips n Tricks
+FSDS - 19th June class (No. 171) @ 52:25 time

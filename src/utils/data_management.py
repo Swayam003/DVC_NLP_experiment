@@ -1,7 +1,5 @@
-from cmath import pi
 import logging
 import random
-from turtle import title
 from typing import Any
 from tqdm import tqdm
 import xml.etree.ElementTree as ET
@@ -24,7 +22,7 @@ class data_management:
         for line in tqdm(fd_in):
             try:
                 fd_out = fd_out_train if random.random() > split else fd_out_test
-                attr: str = ET.fromstring(line).attrib   # gets the tags
+                attr: Any = ET.fromstring(line).attrib   # gets the tags
                 pid: Any = attr.get('Id', "")
                 label: int = 1 if target_tag in attr.get('Tags',"") else 0
                 title: str = re.sub(r"\s+", " ", attr.get('Title', "")).strip()
